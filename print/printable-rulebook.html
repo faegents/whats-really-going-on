@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Really Going On — Rulebook</title>
+  <style>
+    /* ===== BASE RESET & PAGE SETUP ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.6in;
+    }
+
+    html, body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: #111;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      margin-bottom: 0.35em;
+    }
+
+    h1 {
+      font-size: 26pt;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 15pt;
+      border-bottom: 2.5px solid #111;
+      padding-bottom: 4px;
+      margin-top: 0.1em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      margin-top: 1em;
+      margin-bottom: 0.3em;
+    }
+
+    h4 {
+      font-size: 10.5pt;
+      margin-top: 0.8em;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      margin-bottom: 0.6em;
+    }
+
+    ul, ol {
+      margin: 0.4em 0 0.7em 1.4em;
+    }
+
+    li {
+      margin-bottom: 0.25em;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    blockquote {
+      border-left: 3px solid #999;
+      margin: 0.6em 0 0.6em 1em;
+      padding: 0.3em 0.8em;
+      color: #333;
+      font-style: italic;
+      background: #f9f9f9;
+    }
+
+    /* ===== DECK COLOR SYSTEM ===== */
+    .deck-a { color: #c0392b; font-weight: bold; }
+    .deck-b { color: #1c2833; font-weight: bold; }
+    .deck-c { color: #1e8449; font-weight: bold; }
+    .deck-d { color: #6c3483; font-weight: bold; }
+
+    .badge {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 3px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+    }
+    .badge-a { background: #c0392b; color: #fff; }
+    .badge-b { background: #1c2833; color: #fff; }
+    .badge-c { background: #1e8449; color: #fff; }
+    .badge-d { background: #6c3483; color: #fff; }
+
+    /* ===== TABLES ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.6em 0 0.9em 0;
+      font-size: 10pt;
+    }
+
+    th {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      background: #111;
+      color: #fff;
+      text-align: left;
+      padding: 5px 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    td {
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f5f5f5;
+    }
+
+    tr:first-child td {
+      background: #fff;
+    }
+
+    /* ===== COVER / TITLE BLOCK ===== */
+    .title-block {
+      text-align: center;
+      padding: 28px 0 20px 0;
+      border-bottom: 4px double #111;
+      margin-bottom: 24px;
+    }
+
+    .title-block h1 {
+      font-size: 30pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .title-block .subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13pt;
+      font-weight: 400;
+      color: #444;
+      margin: 4px 0 10px 0;
+    }
+
+    .title-block .meta {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .title-block .tagline {
+      font-style: italic;
+      font-size: 11pt;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    /* ===== DECK INVENTORY TABLE ===== */
+    .inventory-table td:first-child {
+      font-weight: bold;
+    }
+
+    .deck-row-a td { border-left: 4px solid #c0392b; }
+    .deck-row-b td { border-left: 4px solid #1c2833; }
+    .deck-row-c td { border-left: 4px solid #1e8449; }
+    .deck-row-d td { border-left: 4px solid #6c3483; }
+
+    /* ===== PHASE BOXES ===== */
+    .phase-box {
+      border: 1.5px solid #bbb;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin: 0.7em 0;
+      background: #fefefe;
+    }
+
+    .phase-box .phase-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .phase-box .phase-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* ===== VOTE TOKENS ===== */
+    .vote-tokens {
+      display: flex;
+      gap: 12px;
+      margin: 0.6em 0;
+      flex-wrap: wrap;
+    }
+
+    .token {
+      border: 2px solid;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 9.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .token-believer { border-color: #1e8449; color: #1e8449; background: #eafaf1; }
+    .token-skeptic  { border-color: #555; color: #333; background: #f5f5f5; }
+    .token-plant    { border-color: #c0392b; color: #c0392b; background: #fdf0ee; }
+
+    /* ===== BOOST CARDS TABLE ===== */
+    .boost-table td:first-child {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      white-space: nowrap;
+      background: #f0e6f8;
+      color: #6c3483;
+      border-left: 4px solid #6c3483;
+    }
+
+    /* ===== WILD CARDS ===== */
+    .wild-box {
+      background: #f9f9f9;
+      border: 1px dashed #aaa;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin: 0.5em 0;
+    }
+
+    /* ===== OPTIONAL RULES ===== */
+    .optional-rule {
+      margin-bottom: 0.7em;
+      padding-left: 0.5em;
+      border-left: 2px solid #ddd;
+    }
+    .optional-rule strong {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+    }
+
+    /* ===== PAGE BREAK CONTROL ===== */
+    .page-break-before {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .no-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* ===== QUICK REFERENCE CARD ===== */
+    .qref-wrapper {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .qref-card {
+      border: 2.5px solid #111;
+      border-radius: 6px;
+      padding: 14px 16px;
+      max-width: 100%;
+      background: #fff;
+    }
+
+    .qref-header {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13pt;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid #111;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .qref-header small {
+      font-size: 9pt;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      display: block;
+      color: #555;
+      margin-top: 2px;
+      text-transform: none;
+    }
+
+    .qref-columns {
+      display: flex;
+      gap: 16px;
+    }
+
+    .qref-col {
+      flex: 1;
+    }
+
+    .qref-col h4 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+
+    .qref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 0;
+    }
+
+    .qref-table th {
+      font-size: 8pt;
+      padding: 3px 6px;
+      background: #333;
+    }
+
+    .qref-table td {
+      padding: 3px 6px;
+      border: 1px solid #ccc;
+      font-size: 9pt;
+    }
+
+    .qref-table tr:nth-child(even) td {
+      background: #f5f5f5;
+    }
+
+    .qref-reminder {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      color: #333;
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid #ccc;
+    }
+
+    .qref-dashed-line {
+      border: none;
+      border-top: 1.5px dashed #bbb;
+      margin: 18px 0 14px 0;
+    }
+
+    .qref-cut-label {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      color: #999;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .scoring-inline {
+      display: inline-block;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    /* ===== PRINT MEDIA ===== */
+    @media print {
+      nav, header.screen-only, .no-print, button, .ui-chrome {
+        display: none !important;
+      }
+
+      body {
+        font-size: 10.5pt;
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .vote-tokens {
+        flex-wrap: nowrap;
+      }
+    }
+
+    /* ===== SCREEN HELPERS ===== */
+    @media screen {
+      body {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.6in;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      }
+    }
+
+    section {
+      margin-bottom: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TITLE BLOCK ===== -->
+  <div class="title-block">
+    <h1>What's Really Going On</h1>
+    <div class="subtitle">A Conspiracy Theory Party Game for 2–6 Players</div>
+    <div class="meta">Ages 16+ &nbsp;|&nbsp; 45–90 Minutes</div>
+    <div class="tagline">"They don't want you to play this game."</div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section>
+    <p>The world is run by shadowy forces. Everyone knows it. The question isn't <em>whether</em> a conspiracy exists — it's <em>which one</em> you've uncovered, and whether you can convince everyone else that yours is real.</p>
+    <p>In <strong>What's Really Going On</strong>, players draw from three decks to assemble a unique conspiracy theory, then present it to The Panel with total conviction. Survive hostile questioning, earn BELIEVER votes, and score points. The most persuasive theorist wins.</p>
+  </section>
+
+  <!-- ===== WHAT'S IN THE BOX ===== -->
+  <section class="no-break">
+    <h2>What's in the Box <small style="font-size:10pt;font-weight:400;text-transform:none;">(Print &amp; Play version)</small></h2>
+    <table class="inventory-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="deck-row-a">
+          <td><span class="deck-a">Deck A — THE ACTORS (Red)</span></td>
+          <td>54 cards (50 standard + 4 Wild)</td>
+        </tr>
+        <tr class="deck-row-b">
+          <td><span class="deck-b">Deck B — THE ACT (Black)</span></td>
+          <td>54 cards (50 standard + 4 Wild)</td>
+        </tr>
+        <tr class="deck-row-c">
+          <td><span class="deck-c">Deck C — THE EVIDENCE (Green)</span></td>
+          <td>54 cards (50 standard + 4 Wild)</td>
+        </tr>
+        <tr class="deck-row-d">
+          <td><span class="deck-d">Conspiracy Boost Deck (Purple)</span></td>
+          <td>31 cards (30 Boost + 1 THE LEAK)</td>
+        </tr>
+        <tr>
+          <td>Theory Sheets</td>
+          <td>Print multiples</td>
+        </tr>
+        <tr>
+          <td>Voting tokens</td>
+          <td>Cut from this sheet or use sticky notes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== OBJECT ===== -->
+  <section class="no-break">
+    <h2>Object of the Game</h2>
+    <p>Craft a conspiracy theory from your drawn cards, deliver it as if your life depends on it, and survive hostile questioning from The Panel. Earn <strong>BELIEVER votes</strong> to score points. First player to <strong>20 Conviction Points</strong> wins.</p>
+  </section>
+
+  <!-- ===== SETUP ===== -->
+  <section class="page-break-before">
+    <h2>Setup</h2>
+    <ol>
+      <li><strong>Shuffle each of the three main decks separately.</strong> Place them face-down in the center labeled
+        <span class="badge badge-a">A</span>
+        <span class="badge badge-b">B</span>
+        <span class="badge badge-c">C</span>.
+      </li>
+      <li><strong>Shuffle the Conspiracy Boost deck</strong> <span class="badge badge-d">D</span> separately. Place it face-down.</li>
+      <li><strong>Give each player</strong> a Theory Sheet and a pen.</li>
+      <li><strong>Determine the first Theorist</strong> — whoever most recently said something in real life that sounded like a conspiracy theory. If disputed, youngest player goes first.</li>
+      <li><strong>Play proceeds clockwise.</strong></li>
+    </ol>
+  </section>
+
+  <!-- ===== HOW TO PLAY ===== -->
+  <section class="page-break-before">
+    <h2>How to Play</h2>
+    <p>Each turn belongs to one <strong>Theorist</strong>. All other players are <strong>The Panel</strong>.</p>
+
+    <!-- PHASE 1 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 1</div>
+      <div class="phase-title">DRAW</div>
+      <p>The Theorist draws:</p>
+      <ul>
+        <li><strong>2 cards</strong> from <span class="deck-a">Deck A (ACTORS)</span></li>
+        <li><strong>2 cards</strong> from <span class="deck-b">Deck B (THE ACT)</span></li>
+        <li><strong>2 cards</strong> from <span class="deck-c">Deck C (EVIDENCE)</span></li>
+      </ul>
+      <p>Choose <strong>exactly one card from each deck</strong> to build your conspiracy. Discard unused cards face-down.</p>
+      <p>Your three chosen cards combine into one theory:</p>
+      <blockquote><strong>"[ACTOR] [ACT] [EVIDENCE]."</strong></blockquote>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><em>"The Illuminati faked the moon landing because the Simpsons predicted it in 1998, down to the exact date."</em></li>
+        <li><em>"Lizard People created COVID-19 in a lab to harvest adrenochrome from the general public."</em></li>
+        <li><em>"NASA built a secret base on the dark side of the Moon to prepare Earth for the alien disclosure event scheduled for 2027."</em></li>
+      </ul>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 2 — 2 Minutes</div>
+      <div class="phase-title">PLAN</div>
+      <p>The Theorist has <strong>2 minutes of silence</strong> to prepare their presentation. Jot notes on your Theory Sheet. The Panel may talk quietly among themselves but not to the Theorist.</p>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 3 — 90 Seconds</div>
+      <div class="phase-title">PRESENT</div>
+      <p>The Theorist stands (encouraged) and delivers their conspiracy theory as if they genuinely believe it. The presentation must include:</p>
+      <ol>
+        <li>Name the <span class="deck-a">ACTOR</span> (who is behind it)</li>
+        <li>State <span class="deck-b">THE ACT</span> (what they did)</li>
+        <li>Explain the <span class="deck-c">EVIDENCE</span> — both the motive and the proof</li>
+      </ol>
+      <p><strong>When time is called, wrap up within one sentence.</strong> Going over forfeits 1 point.</p>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 4 — 2 Minutes</div>
+      <div class="phase-title">INTERROGATE</div>
+      <p>The Panel questions the Theorist. Rules:</p>
+      <ul>
+        <li>Any Panel member may ask a question at any time</li>
+        <li>Questions must genuinely attempt to poke holes or demand elaboration</li>
+        <li>The Theorist must answer every question. They may <strong>not</strong> say "I don't know."</li>
+        <li><strong>At the START of Q&amp;A</strong>, draw <strong>one Boost Card</strong> <span class="badge badge-d">D</span> and read it aloud. Effect applies immediately.</li>
+        <li><strong>CITATION NEEDED:</strong> Once per Q&amp;A, a Panel member may call "CITATION NEEDED." The Theorist names a source (fake sources encouraged). Majority Panel approval = +1 CP (max 2 per turn).</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 5 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 5</div>
+      <div class="phase-title">VOTE</div>
+      <p>All Panel members <strong>simultaneously</strong> reveal one vote token:</p>
+      <div class="vote-tokens">
+        <span class="token token-believer">BELIEVER — Convinced (or convinced enough)</span>
+        <span class="token token-skeptic">SKEPTIC — Not buying it, but solid effort</span>
+        <span class="token token-plant">PLANT — Government operative. Theory collapsed.</span>
+      </div>
+      <p style="margin-top:0.5em;font-size:9.5pt;"><em>No discussion until after tokens are revealed. Cannot vote for yourself.</em></p>
+    </div>
+
+    <!-- PHASE 6 -->
+    <div class="phase-box no-break">
+      <div class="phase-label">Phase 6</div>
+      <div class="phase-title">SCORE</div>
+      <p><strong>Theorist earns:</strong></p>
+      <table>
+        <thead>
+          <tr><th>Result</th><th>Points</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Each BELIEVER vote</td><td><strong>3 pts</strong></td></tr>
+          <tr><td>Each SKEPTIC vote</td><td><strong>1 pt</strong></td></tr>
+          <tr><td>Each PLANT vote</td><td><strong>0 pts</strong></td></tr>
+          <tr><td>Unanimous BELIEVER</td><td><strong>+2 bonus pts</strong></td></tr>
+          <tr><td>Majority PLANT</td><td><strong>−1 pt (floor: 0)</strong></td></tr>
+          <tr><td>CITATION NEEDED answered well (max 2)</td><td><strong>+1 pt each</strong></td></tr>
+          <tr><td>Boost Card fully executed</td><td><strong>+1 pt</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Panel earns:</strong></p>
+      <table>
+        <thead>
+          <tr><th>Result</th><th>Points</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Voted PLANT and majority also voted PLANT</td><td><strong>+1 pt</strong></td></tr>
+          <tr><td>First to vote BELIEVER and Theorist wins the round</td><td><strong>+1 pt</strong></td></tr>
+          <tr><td>Best Question Award (given by Theorist)</td><td><strong>+1 pt</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== WINNING ===== -->
+  <section class="no-break">
+    <h2>Winning</h2>
+    <p><strong>First player to 20 Conviction Points wins.</strong></p>
+    <p>Tiebreaker: tied players all present simultaneously with fresh draw; each non-tied player casts BELIEVER or PLANT. Most BELIEVERs wins.</p>
+  </section>
+
+  <!-- ===== BOOST CARDS ===== -->
+  <section class="page-break-before">
+    <h2>The Conspiracy Boost Cards <span class="badge badge-d">D</span></h2>
+    <p>Drawn at start of Q&amp;A. 30 total (3 copies each of 10 types).</p>
+    <table class="boost-table">
+      <thead>
+        <tr><th>Card</th><th>Effect</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DOUBLE DOWN</td>
+          <td>Add a second ACTOR secretly controlling the first</td>
+        </tr>
+        <tr>
+          <td>EXPERT WITNESS</td>
+          <td>Cite a fake expert by name, title, and institution</td>
+        </tr>
+        <tr>
+          <td>THE MEDIA COVERUP</td>
+          <td>Every answer must begin with "That's exactly what they want you to think"</td>
+        </tr>
+        <tr>
+          <td>CLASSIFIED FOOTAGE</td>
+          <td>Stand and point to where in the room the evidence is hidden</td>
+        </tr>
+        <tr>
+          <td>TIMELINE SHIFT</td>
+          <td>Conspiracy must now have started 200 years earlier</td>
+        </tr>
+        <tr>
+          <td>ALLY REVEALED</td>
+          <td>Pick a Panel member — they must corroborate at least one answer</td>
+        </tr>
+        <tr>
+          <td>IT'S BIGGER THAN YOU THINK</td>
+          <td>Draw a second ACT card and incorporate it</td>
+        </tr>
+        <tr>
+          <td>THEY'RE IN THIS ROOM</td>
+          <td>Imply that one questioner is an operative</td>
+        </tr>
+        <tr>
+          <td>THE ACCIDENTAL CONFESSION</td>
+          <td>"Accidentally" reveal something, then walk it back</td>
+        </tr>
+        <tr>
+          <td>NOTHING TO SEE HERE</td>
+          <td>Refuse to answer exactly one question; explain why it's dangerous</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="wild-box no-break">
+      <h3 style="margin-top:0;">THE LEAK Card</h3>
+      <p>Shuffled into the Boost deck. When drawn, secretly pass it plus a written note to any player. That player reads the note aloud during Q&amp;A as a genuine tip.</p>
+    </div>
+
+    <div class="wild-box no-break">
+      <h3 style="margin-top:0;">Wild Cards</h3>
+      <p>Each deck has <strong>4 Wild cards</strong>:</p>
+      <ul>
+        <li><strong>[YOUR CHOICE] ×2</strong> — Name any actor/act/evidence of your choosing</li>
+        <li><strong>[COMBO]</strong> — Play two cards of that type (both apply)</li>
+        <li><strong>[INSIDER] / [ESCALATE] / [ONGOING] / [DOUBLE DOWN] / [PERSONAL WITNESS]</strong> — Deck-specific special effects</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== OPTIONAL RULES ===== -->
+  <section class="page-break-before">
+    <h2>Optional Rules</h2>
+
+    <div class="optional-rule">
+      <p><strong>Public Discard</strong> — One unused card placed face-up. Gives the Panel misleading intel.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>The Deep State Ruling</strong> — If a theory accidentally makes factual sense, all other players award 2 CP in honor/horror.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>Grand Unified Theory (5–6 players)</strong> — Spend 5 pts; use ALL recent discards. 3-min prep, 2-min present, 3-min Q&amp;A. Scoring doubled. Failure = −7 pts.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>Hot Take Mode</strong> — No planning phase. 30-sec card selection, 60-sec present, 90-sec Q&amp;A.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>The Senate Hearing</strong> — One player is THE SENATOR; runs all Q&amp;A in formal congressional language.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>Expert Mode</strong> — No Wild cards.</p>
+    </div>
+    <div class="optional-rule">
+      <p><strong>Cinematic Universe Mode</strong> — Must reference a previous round's theory as supporting evidence.</p>
+    </div>
+  </section>
+
+  <!-- ===== QUICK REFERENCE ===== -->
+  <div class="qref-wrapper">
+    <h2>Quick Reference</h2>
+    <p style="font-size:9.5pt;color:#555;margin-bottom:12px;font-style:italic;">Full turn summary — cut out and keep nearby.</p>
+
+    <div class="qref-card no-break">
+      <div class="qref-header">
+        WHAT'S REALLY GOING ON — Quick Reference
+        <small>First to 20 Conviction Points wins &bull; Cannot vote for yourself &bull; Laughing is encouraged but weakness</small>
+      </div>
+
+      <div class="qref-columns">
+        <div class="qref-col">
+          <h4>Turn Phases</h4>
+          <table class="qref-table">
+            <thead>
+              <tr><th>Phase</th><th>Time</th><th>What Happens</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>DRAW</strong></td><td>—</td><td>2 cards/deck; choose 1 each from <span class="deck-a">A</span> <span class="deck-b">B</span> <span class="deck-c">C</span></td></tr>
+              <tr><td><strong>PLAN</strong></td><td>2 min</td><td>Write theory on Theory Sheet</td></tr>
+              <tr><td><strong>PRESENT</strong></td><td>90 sec</td><td>Deliver with conviction</td></tr>
+              <tr><td><strong>INTERROGATE</strong></td><td>2 min</td><td>Defend; draw 1 Boost Card first</td></tr>
+              <tr><td><strong>VOTE</strong></td><td>—</td><td>BELIEVER / SKEPTIC / PLANT</td></tr>
+              <tr><td><strong>SCORE</strong></td><td>—</td><td>Calculate points</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="qref-col">
+          <h4>Scoring</h4>
+          <table class="qref-table">
+            <thead>
+              <tr><th>Result</th><th>Pts</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>BELIEVER vote</td><td>3</td></tr>
+              <tr><td>SKEPTIC vote</td><td>1</td></tr>
+              <tr><td>PLANT vote</td><td>0</td></tr>
+              <tr><td>Unanimous BELIEVER</td><td>+2</td></tr>
+              <tr><td>Majority PLANT</td><td>−1</td></tr>
+              <tr><td>Citation Needed (max 2)</td><td>+1</td></tr>
+              <tr><td>Boost Card executed</td><td>+1</td></tr>
+            </tbody>
+          </table>
+
+          <h4 style="margin-top:8px;">Panel Earns</h4>
+          <table class="qref-table">
+            <thead>
+              <tr><th>Result</th><th>Pts</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>PLANT with majority PLANT</td><td>+1</td></tr>
+              <tr><td>First BELIEVER, Theorist wins round</td><td>+1</td></tr>
+              <tr><td>Best Question Award</td><td>+1</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="qref-reminder">
+        <span class="scoring-inline"><span class="deck-a">A = ACTORS (red)</span></span>
+        <span class="scoring-inline"><span class="deck-b">B = THE ACT (black)</span></span>
+        <span class="scoring-inline"><span class="deck-c">C = EVIDENCE (green)</span></span>
+        <span class="scoring-inline"><span class="deck-d">D = BOOST DECK (purple)</span></span>
+        &nbsp;&mdash;&nbsp;
+        <em>CC BY-NC 4.0 — Share freely, conspire responsibly.</em>
+      </div>
+    </div>
+
+    <hr class="qref-dashed-line">
+    <div class="qref-cut-label">&#9988; cut here</div>
+  </div>
+
+</body>
+</html>

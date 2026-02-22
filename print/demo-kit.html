@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>What's Really Going On — Demo Kit (10 cards per deck)</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: #fff; color: #111; }
+
+.guide {
+  max-width: 7.5in; margin: 0.3in auto 0.1in; padding: 10px 14px;
+  background: #fffde7; border: 1px solid #f9a825; border-radius: 4px;
+  font-family: Arial, sans-serif; font-size: 9pt; line-height: 1.6;
+}
+.guide strong { display: block; margin-bottom: 4px; font-size: 10pt; }
+.dlabel {
+  max-width: 7.5in; margin: 0.15in auto 0.05in;
+  font-family: Arial, sans-serif; font-size: 11pt; font-weight: bold; color: #666;
+  padding-left: 2px;
+}
+@media print { .guide, .dlabel { display: none; } }
+
+.grid { width: 7.5in; margin: 0 auto; display: flex; flex-wrap: wrap; }
+.newdeck { page-break-before: always; break-before: page; }
+
+.c {
+  width: 2.5in; height: 3.5in;
+  border: 1px dashed #bbb;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  page-break-inside: avoid; break-inside: avoid;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+
+.h {
+  padding: 5px 7px; display: flex;
+  justify-content: space-between; align-items: center;
+  flex-shrink: 0;
+}
+.h .dl { font-family: Arial, sans-serif; font-size: 6pt; font-weight: bold;
+  letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.85); }
+.h .n  { font-family: Arial, sans-serif; font-size: 6pt; color: rgba(255,255,255,.6); }
+
+.b {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 0.1in 0.12in; text-align: center;
+}
+.b .q { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase;
+  letter-spacing: 2px; color: #ccc; margin-bottom: 7px; }
+.b .t      { font-size: 14pt; font-weight: bold; line-height: 1.3; }
+.b .t.med  { font-size: 12pt; }
+.b .t.sm   { font-size: 9.5pt; }
+.b .t.xs   { font-size: 8pt; }
+.b .sub    { font-family: Arial, sans-serif; font-size: 7pt; color: #777;
+  margin-top: 8px; line-height: 1.4; font-style: italic; }
+
+.bc .b { padding: 0.08in 0.12in; }
+.bc .b .btitle { font-family: Arial, sans-serif; font-size: 14pt; font-weight: bold;
+  color: #111; margin-bottom: 3px; }
+.bc .b .bflavor { font-family: Arial, sans-serif; font-size: 6.5pt; font-style: italic;
+  color: #999; margin-bottom: 6px; line-height: 1.3; }
+.bc .b .bdesc  { font-family: Arial, sans-serif; font-size: 7.5pt; color: #333;
+  line-height: 1.45; text-align: left; }
+
+.f { text-align: center; font-family: Arial, sans-serif; font-size: 5pt;
+  color: #ccc; letter-spacing: 2px; text-transform: uppercase;
+  padding: 2px 0; border-top: 1px solid #f0f0f0; flex-shrink: 0; }
+
+.a .h         { background: #c0392b; }
+.b_ .h        { background: #1c2833; }
+.cc .h        { background: #1e8449; }
+.d .h         { background: #6c3483; }
+.d.bc.leak .h { background: #1b2631; }
+
+/* Demo badge */
+.demo-badge {
+  max-width: 7.5in; margin: 0 auto 0.1in;
+  font-family: Arial, sans-serif; font-size: 8pt; color: #888;
+  text-align: center; letter-spacing: 1px;
+}
+@media print { .demo-badge { display: block; } }
+</style>
+</head>
+<body>
+
+<div class="guide">
+  <strong>WRGO — Demo Kit Print Instructions</strong>
+  <b>40 cards total: 10 per deck.</b> Print on <b>letter-size paper (8.5&Prime; &times; 11&Prime;)</b> at <b>100% / Actual size</b> — do NOT scale to fit.<br>
+  Each page = up to 9 cards (3&times;3). Cut along dashed lines. Recommended: <b>110 lb cardstock</b>.<br>
+  Decks: <b style="color:#c0392b">A — WHO (Red, 10)</b> &nbsp;|&nbsp;
+         <b>B — WHAT (Black, 10)</b> &nbsp;|&nbsp;
+         <b style="color:#1e8449">C — WHY/HOW (Green, 10)</b> &nbsp;|&nbsp;
+         <b style="color:#6c3483">D — BOOST (Purple, 10)</b>
+</div>
+
+<!-- DECK A -->
+<div class="dlabel">DECK A — THE ACTORS (WHO) &nbsp;&bull;&nbsp; Red &nbsp;&bull;&nbsp; 10 cards</div>
+<div class="demo-badge">DEMO KIT</div>
+<div class="grid">
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">1</span></div><div class="b"><div class="q">WHO</div><div class="t">The Illuminati</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">2</span></div><div class="b"><div class="q">WHO</div><div class="t">Big Pharma</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">3</span></div><div class="b"><div class="q">WHO</div><div class="t">The Deep State</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">4</span></div><div class="b"><div class="q">WHO</div><div class="t">Tech Billionaires</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">5</span></div><div class="b"><div class="q">WHO</div><div class="t">NASA</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">6</span></div><div class="b"><div class="q">WHO</div><div class="t">The Vatican</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">7</span></div><div class="b"><div class="q">WHO</div><div class="t">Lizard People</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">8</span></div><div class="b"><div class="q">WHO</div><div class="t">The CIA</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">9</span></div><div class="b"><div class="q">WHO</div><div class="t med">The World Economic Forum (WEF)</div></div><div class="f">WRGO</div></div>
+<div class="c a"><div class="h"><span class="dl">DECK A — WHO</span><span class="n">10</span></div><div class="b"><div class="q">WHO</div><div class="t">Ancient Aliens</div></div><div class="f">WRGO</div></div>
+</div>
+
+<!-- DECK B -->
+<div class="dlabel newdeck">DECK B — THE ACT (WHAT) &nbsp;&bull;&nbsp; Black &nbsp;&bull;&nbsp; 10 cards</div>
+<div class="grid newdeck">
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">1</span></div><div class="b"><div class="q">WHAT</div><div class="t">faked the moon landing</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">2</span></div><div class="b"><div class="q">WHAT</div><div class="t med">created COVID-19 in a lab</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">3</span></div><div class="b"><div class="q">WHAT</div><div class="t sm">is putting fluoride in the water to control our minds</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">4</span></div><div class="b"><div class="q">WHAT</div><div class="t med">engineered the September 11th attacks</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">5</span></div><div class="b"><div class="q">WHAT</div><div class="t sm">controls the weather using HAARP technology</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">6</span></div><div class="b"><div class="q">WHAT</div><div class="t sm">built 5G towers to activate nanobots in the unvaccinated</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">7</span></div><div class="b"><div class="q">WHAT</div><div class="t sm">has been hiding free energy technology since the 1940s</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">8</span></div><div class="b"><div class="q">WHAT</div><div class="t sm">assassinated JFK — and framed Lee Harvey Oswald</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">9</span></div><div class="b"><div class="q">WHAT</div><div class="t med">staged the bird flu pandemic</div></div><div class="f">WRGO</div></div>
+<div class="c b_"><div class="h"><span class="dl">DECK B — WHAT</span><span class="n">10</span></div><div class="b"><div class="q">WHAT</div><div class="t med">replaced world leaders with clones</div></div><div class="f">WRGO</div></div>
+</div>
+
+<!-- DECK C -->
+<div class="dlabel newdeck">DECK C — THE EVIDENCE (WHY/HOW) &nbsp;&bull;&nbsp; Green &nbsp;&bull;&nbsp; 10 cards</div>
+<div class="grid newdeck">
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">1</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">to control the global population — and the Reddit thread proving it has been deleted three times</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">2</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">because the Simpsons predicted it in 1998, down to the exact date</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">3</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">and the proof is hidden in the murals at Denver International Airport</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">4</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t sm">to harvest adrenochrome from the general public</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">5</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t sm">because JFK Jr. revealed it in a coded QAnon drop</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">6</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">to distract us from the truth about what&#39;s under Antarctica</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">7</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">and the Georgia Guidestones spelled it out before they were demolished</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">8</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">because the number 33 keeps appearing in every major news event</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">9</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t sm">to usher in the Great Reset and the digital prison state</div></div><div class="f">WRGO</div></div>
+<div class="c cc"><div class="h"><span class="dl">DECK C — WHY/HOW</span><span class="n">10</span></div><div class="b"><div class="q">WHY / HOW</div><div class="t xs">because birds aren&#39;t real — they&#39;re government surveillance drones</div></div><div class="f">WRGO</div></div>
+</div>
+
+<!-- DECK D — one of each boost type -->
+<div class="dlabel newdeck">DECK D — CONSPIRACY BOOST &nbsp;&bull;&nbsp; Purple &nbsp;&bull;&nbsp; 10 cards (1 of each type)</div>
+<div class="grid newdeck">
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">1</span></div><div class="b"><div class="btitle">DOUBLE DOWN</div><div class="bflavor">They're not just in on it. There's a layer above them.</div><div class="bdesc">A second ACTOR is secretly controlling the first. Name the second actor during Q&amp;A and explain how they fit.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">2</span></div><div class="b"><div class="btitle">EXPERT WITNESS</div><div class="bflavor">The credentials are real. The institution is also real. Neither of them exist.</div><div class="bdesc">During Q&amp;A cite at least one fake expert by: full name, academic title, and institution. Make it convincing.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">3</span></div><div class="b"><div class="btitle">THE MEDIA COVERUP</div><div class="bflavor">Whose side are you on, exactly?</div><div class="bdesc">Every single answer during Q&amp;A must begin with the exact phrase: &ldquo;That's exactly what they want you to think.&rdquo; Forget once and lose the bonus.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">4</span></div><div class="b"><div class="btitle">CLASSIFIED FOOTAGE</div><div class="bflavor">The proof exists. It's in this room. Right now.</div><div class="bdesc">At some point during Q&amp;A, stand up, point to a specific location in the room, and explain what evidence would be found there.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">5</span></div><div class="b"><div class="btitle">TIMELINE SHIFT</div><div class="bflavor">You think this started recently. Adorable.</div><div class="bdesc">The conspiracy must now have begun at least 200 years earlier than originally implied. Explain the origins.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">6</span></div><div class="b"><div class="btitle">ALLY REVEALED</div><div class="bflavor">One of you is not who they appear to be.</div><div class="bdesc">Before Q&amp;A, secretly choose one Panel member. They are in on it. They must corroborate at least one answer unprompted. Both earn the bonus if successful.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">7</span></div><div class="b"><div class="btitle">IT'S BIGGER THAN YOU THINK</div><div class="bflavor">You only scratched the surface.</div><div class="bdesc">Draw one additional card from Deck B (THE ACT). This sub-conspiracy is also happening simultaneously. Incorporate it into your answers.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">8</span></div><div class="b"><div class="btitle">THEY'RE IN THIS ROOM</div><div class="bflavor">Look around you.</div><div class="bdesc">At some point during Q&amp;A, imply (do not accuse directly) that one questioner is an operative of the conspiracy. Do not name them.</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">9</span></div><div class="b"><div class="btitle">THE ACCIDENTAL CONFESSION</div><div class="bflavor">You weren't supposed to say that. You definitely didn't say that.</div><div class="bdesc">Accidentally reveal something alarming mid-answer, then immediately attempt to walk it back. Example: &ldquo;...and the second phase begins in March&mdash; I didn't say that.&rdquo;</div></div><div class="f">WRGO</div></div>
+<div class="c d bc"><div class="h"><span class="dl">BOOST</span><span class="n">10</span></div><div class="b"><div class="btitle">NOTHING TO SEE HERE</div><div class="bflavor">That question is classified. For your own safety.</div><div class="bdesc">Refuse to answer exactly one question during Q&amp;A. Explain calmly why answering would be dangerous. One use only.</div></div><div class="f">WRGO</div></div>
+</div>
+
+</body>
+</html>

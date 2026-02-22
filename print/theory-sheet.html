@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Really Going On — Theory Sheet</title>
+  <style>
+    /* ===== BASE RESET ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 0.45in 0.5in;
+    }
+
+    html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      color: #111;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== SHEET LAYOUT — 2 per page ===== */
+    .page {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .sheet {
+      width: 100%;
+      border: 1.5px solid #555;
+      border-radius: 5px;
+      padding: 10px 12px 8px 12px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .sheet + .sheet {
+      margin-top: 14px;
+    }
+
+    /* Second sheet on same page — no page break */
+    .sheet:nth-child(2) {
+      page-break-before: avoid;
+      break-before: avoid;
+    }
+
+    /* ===== HEADER ===== */
+    .sheet-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 2px solid #111;
+      padding-bottom: 5px;
+      margin-bottom: 7px;
+    }
+
+    .brand-title {
+      font-size: 13pt;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 7pt;
+      font-weight: 400;
+      color: #555;
+      letter-spacing: 0.04em;
+      font-style: italic;
+    }
+
+    .sheet-meta {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+    }
+
+    .meta-field {
+      font-size: 8.5pt;
+      white-space: nowrap;
+    }
+
+    .meta-field .label {
+      font-weight: 700;
+      font-size: 8pt;
+      color: #333;
+    }
+
+    .underline {
+      display: inline-block;
+      border-bottom: 1.2px solid #555;
+      min-width: 100px;
+      height: 1em;
+      vertical-align: bottom;
+    }
+
+    .underline-short {
+      min-width: 32px;
+    }
+
+    /* ===== DECK CARD FIELDS ===== */
+    .deck-fields {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 7px;
+    }
+
+    .deck-field {
+      flex: 1;
+      border: 1.5px dashed #aaa;
+      border-radius: 4px;
+      background: #f7f7f7;
+      padding: 5px 7px 6px 7px;
+      min-height: 56px;
+    }
+
+    .deck-field-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .deck-badge {
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-size: 7pt;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: #fff;
+    }
+    .badge-a { background: #c0392b; }
+    .badge-b { background: #1c2833; }
+    .badge-c { background: #1e8449; }
+
+    .deck-label-text-a { color: #c0392b; }
+    .deck-label-text-b { color: #1c2833; }
+    .deck-label-text-c { color: #1e8449; }
+
+    .deck-write-area {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      min-height: 32px;
+      padding: 3px 5px;
+      font-size: 8.5pt;
+      color: #333;
+      font-style: italic;
+    }
+
+    /* ===== FULL THEORY STATEMENT ===== */
+    .theory-statement {
+      border: 1.5px solid #333;
+      border-radius: 4px;
+      padding: 5px 8px;
+      margin-bottom: 7px;
+      background: #fafafa;
+    }
+
+    .theory-statement-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .theory-template {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px;
+      font-size: 9pt;
+      font-style: italic;
+      color: #222;
+    }
+
+    .theory-blank {
+      display: inline-block;
+      border-bottom: 1.2px solid #333;
+      min-width: 90px;
+      height: 1em;
+      vertical-align: bottom;
+    }
+
+    .theory-blank-labeled {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 100px;
+    }
+
+    .theory-blank-labeled .blank-line {
+      border-bottom: 1.2px solid #333;
+      width: 100%;
+      min-width: 100px;
+      height: 1em;
+      display: block;
+    }
+
+    .theory-blank-labeled .blank-hint {
+      font-size: 6.5pt;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 1px;
+    }
+    .hint-a { color: #c0392b; }
+    .hint-b { color: #1c2833; }
+    .hint-c { color: #1e8449; }
+
+    /* ===== NOTES AREA ===== */
+    .notes-area {
+      margin-bottom: 7px;
+    }
+
+    .notes-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .notes-lines {
+      border: 1.5px dashed #bbb;
+      border-radius: 3px;
+      background: #f9f9f9;
+      padding: 4px 7px;
+    }
+
+    .note-line {
+      border-bottom: 1px solid #ddd;
+      height: 18px;
+      display: block;
+    }
+
+    .note-line:last-child {
+      border-bottom: none;
+    }
+
+    /* ===== BOOST CARD ===== */
+    .bottom-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 7px;
+    }
+
+    .boost-field {
+      flex: 0 0 140px;
+      border: 1.5px dashed #6c3483;
+      border-radius: 4px;
+      background: #f9f5fd;
+      padding: 5px 7px;
+      min-height: 46px;
+    }
+
+    .boost-field-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #6c3483;
+      margin-bottom: 3px;
+    }
+
+    .boost-write-area {
+      background: #fff;
+      border: 1px solid #d5b8ec;
+      border-radius: 3px;
+      min-height: 26px;
+      padding: 2px 4px;
+    }
+
+    /* ===== SCORE TRACKER ===== */
+    .score-tracker {
+      flex: 1;
+      border: 1.5px solid #333;
+      border-radius: 4px;
+      background: #fafafa;
+      padding: 5px 7px;
+    }
+
+    .score-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .score-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .score-item {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 8.5pt;
+      white-space: nowrap;
+    }
+
+    .score-box {
+      display: inline-block;
+      border-bottom: 1.2px solid #333;
+      width: 22px;
+      height: 1em;
+      vertical-align: bottom;
+    }
+
+    .score-mult {
+      font-size: 7.5pt;
+      color: #555;
+    }
+
+    .score-divider {
+      color: #bbb;
+      font-size: 10pt;
+    }
+
+    .score-total .score-box {
+      border-bottom: 2px solid #111;
+      width: 30px;
+      font-weight: 700;
+    }
+
+    .score-total {
+      font-weight: 700;
+    }
+
+    /* ===== VOTER TOKENS ===== */
+    .tokens-section {
+      border-top: 1.5px dashed #999;
+      padding-top: 6px;
+      margin-top: 1px;
+    }
+
+    .tokens-label {
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .tokens-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .token-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .token-card {
+      border-radius: 5px;
+      border: 2px solid;
+      padding: 5px 14px;
+      font-size: 9pt;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      text-align: center;
+      min-width: 80px;
+      line-height: 1.3;
+    }
+
+    .token-believer {
+      border-color: #1e8449;
+      color: #1e8449;
+      background: #eafaf1;
+    }
+
+    .token-skeptic {
+      border-color: #555;
+      color: #333;
+      background: #f5f5f5;
+    }
+
+    .token-plant {
+      border-color: #c0392b;
+      color: #c0392b;
+      background: #fdf0ee;
+    }
+
+    .token-sublabel {
+      font-size: 6.5pt;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cut-indicator {
+      font-size: 6pt;
+      color: #bbb;
+      letter-spacing: 0.04em;
+      margin-top: 1px;
+    }
+
+    /* ===== PRINT MEDIA ===== */
+    @media print {
+      nav, button, .no-print, .screen-only, .ui-chrome {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        font-size: 9pt;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .sheet + .sheet {
+        margin-top: 14px;
+      }
+    }
+
+    /* ===== SCREEN HELPERS ===== */
+    @media screen {
+      body {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.5in;
+        background: #e8e8e8;
+      }
+
+      .page {
+        background: #fff;
+        padding: 0.45in 0.5in;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ============================================================ -->
+  <!-- SHEET 1                                                      -->
+  <!-- ============================================================ -->
+  <div class="sheet">
+
+    <!-- Header -->
+    <div class="sheet-header">
+      <div>
+        <div class="brand-title">What's Really Going On</div>
+        <div class="brand-tagline">Conspiracy Theory Party Game &mdash; Theory Sheet</div>
+      </div>
+      <div class="sheet-meta">
+        <div class="meta-field">
+          <span class="label">Player: </span>
+          <span class="underline"></span>
+        </div>
+        <div class="meta-field">
+          <span class="label">Round #: </span>
+          <span class="underline underline-short"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deck Card Fields -->
+    <div class="deck-fields">
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-a">A</span>
+          <span class="deck-label-text-a">WHO &mdash; The Actor</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-b">B</span>
+          <span class="deck-label-text-b">WHAT &mdash; The Act</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-c">C</span>
+          <span class="deck-label-text-c">WHY / HOW &mdash; The Evidence</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+    </div>
+
+    <!-- Full Theory Statement -->
+    <div class="theory-statement">
+      <div class="theory-statement-label">Full Theory Statement</div>
+      <div class="theory-template">
+        <span style="font-style:normal;font-weight:700;color:#444;">"</span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-a">Actor (A)</span>
+        </span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-b">The Act (B)</span>
+        </span>
+        <span>because</span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-c">Evidence (C)</span>
+        </span>
+        <span style="font-style:normal;font-weight:700;color:#444;">"</span>
+      </div>
+    </div>
+
+    <!-- Notes / Talking Points -->
+    <div class="notes-area">
+      <div class="notes-label">Notes &amp; Talking Points</div>
+      <div class="notes-lines">
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+      </div>
+    </div>
+
+    <!-- Boost Card + Score Tracker -->
+    <div class="bottom-row">
+      <div class="boost-field">
+        <div class="boost-field-label">Boost Card Drawn</div>
+        <div class="boost-write-area">&nbsp;</div>
+      </div>
+      <div class="score-tracker">
+        <div class="score-label">Round Score</div>
+        <div class="score-row">
+          <span class="score-item">
+            <span style="color:#1e8449;font-weight:700;">BELIEVER</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 3</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="color:#333;font-weight:700;">SKEPTIC</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 1</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="color:#c0392b;font-weight:700;">PLANT</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 0</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="font-weight:700;">BONUS</span>
+            <span class="score-box"></span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item score-total">
+            <span>TOTAL</span>
+            <span class="score-box"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voter Tokens -->
+    <div class="tokens-section">
+      <div class="tokens-label">Voter Tokens &mdash; Cut out and use each round</div>
+      <div class="tokens-row">
+        <div class="token-wrapper">
+          <div class="token-card token-believer">BELIEVER</div>
+          <div class="token-sublabel">Convinced</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+        <div class="token-wrapper">
+          <div class="token-card token-skeptic">SKEPTIC</div>
+          <div class="token-sublabel">Not buying it</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+        <div class="token-wrapper">
+          <div class="token-card token-plant">PLANT</div>
+          <div class="token-sublabel">Theory collapsed</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END SHEET 1 -->
+
+
+  <!-- ============================================================ -->
+  <!-- SHEET 2                                                      -->
+  <!-- ============================================================ -->
+  <div class="sheet">
+
+    <!-- Header -->
+    <div class="sheet-header">
+      <div>
+        <div class="brand-title">What's Really Going On</div>
+        <div class="brand-tagline">Conspiracy Theory Party Game &mdash; Theory Sheet</div>
+      </div>
+      <div class="sheet-meta">
+        <div class="meta-field">
+          <span class="label">Player: </span>
+          <span class="underline"></span>
+        </div>
+        <div class="meta-field">
+          <span class="label">Round #: </span>
+          <span class="underline underline-short"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deck Card Fields -->
+    <div class="deck-fields">
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-a">A</span>
+          <span class="deck-label-text-a">WHO &mdash; The Actor</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-b">B</span>
+          <span class="deck-label-text-b">WHAT &mdash; The Act</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+      <div class="deck-field">
+        <div class="deck-field-label">
+          <span class="deck-badge badge-c">C</span>
+          <span class="deck-label-text-c">WHY / HOW &mdash; The Evidence</span>
+        </div>
+        <div class="deck-write-area">&nbsp;</div>
+      </div>
+    </div>
+
+    <!-- Full Theory Statement -->
+    <div class="theory-statement">
+      <div class="theory-statement-label">Full Theory Statement</div>
+      <div class="theory-template">
+        <span style="font-style:normal;font-weight:700;color:#444;">"</span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-a">Actor (A)</span>
+        </span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-b">The Act (B)</span>
+        </span>
+        <span>because</span>
+        <span class="theory-blank-labeled">
+          <span class="blank-line"></span>
+          <span class="blank-hint hint-c">Evidence (C)</span>
+        </span>
+        <span style="font-style:normal;font-weight:700;color:#444;">"</span>
+      </div>
+    </div>
+
+    <!-- Notes / Talking Points -->
+    <div class="notes-area">
+      <div class="notes-label">Notes &amp; Talking Points</div>
+      <div class="notes-lines">
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+        <span class="note-line"></span>
+      </div>
+    </div>
+
+    <!-- Boost Card + Score Tracker -->
+    <div class="bottom-row">
+      <div class="boost-field">
+        <div class="boost-field-label">Boost Card Drawn</div>
+        <div class="boost-write-area">&nbsp;</div>
+      </div>
+      <div class="score-tracker">
+        <div class="score-label">Round Score</div>
+        <div class="score-row">
+          <span class="score-item">
+            <span style="color:#1e8449;font-weight:700;">BELIEVER</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 3</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="color:#333;font-weight:700;">SKEPTIC</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 1</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="color:#c0392b;font-weight:700;">PLANT</span>
+            <span class="score-box"></span>
+            <span class="score-mult">&times; 0</span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item">
+            <span style="font-weight:700;">BONUS</span>
+            <span class="score-box"></span>
+          </span>
+          <span class="score-divider">|</span>
+          <span class="score-item score-total">
+            <span>TOTAL</span>
+            <span class="score-box"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voter Tokens -->
+    <div class="tokens-section">
+      <div class="tokens-label">Voter Tokens &mdash; Cut out and use each round</div>
+      <div class="tokens-row">
+        <div class="token-wrapper">
+          <div class="token-card token-believer">BELIEVER</div>
+          <div class="token-sublabel">Convinced</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+        <div class="token-wrapper">
+          <div class="token-card token-skeptic">SKEPTIC</div>
+          <div class="token-sublabel">Not buying it</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+        <div class="token-wrapper">
+          <div class="token-card token-plant">PLANT</div>
+          <div class="token-sublabel">Theory collapsed</div>
+          <div class="cut-indicator">- - - - -</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END SHEET 2 -->
+
+</div><!-- end .page -->
+
+</body>
+</html>

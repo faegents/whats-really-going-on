@@ -147,10 +147,68 @@ The v1 rulebook's voice was strong. v2 maintains it. The inline editorial commen
 
 ---
 
-## Playtesting Priorities for v2
+## Playtesting Priorities for v2.0
 
 1. Does 90-second Q&A feel too short at 10 players? (Floor Rule may need expansion to 2 vetoes.)
 2. Does the written question requirement feel mandatory or annoying? (If annoying: make it encouraged, not required.)
 3. Does 8 pts feel too easy at 9–10 players, or does it create the right drama?
 4. Does the Chief Skeptic role improve or bog down 8+ player rounds?
 5. Does THE LEAK +2 pt incentive make it feel strategic rather than random?
+
+---
+
+# v2.1 Changes
+
+**Date:** 2026-02-22
+**Scope:** Two targeted improvements: discard mechanics and Panel engagement during PLAN phase.
+
+---
+
+## Change 10: Shadow Evidence — Discards Become Active Weapons
+
+**The problem (v2.0):** Discards are face-up, which is better than face-down, but still passive. They sit there. Panel members *can* reference them but rarely do under Q&A pressure. The mechanic was theoretical.
+
+**The solution:** One Panel member per round may call **"SEIZED"** during PLAN phase to claim one discarded card as an interrogation weapon. This card goes face-down in front of them; during Interrogation they may reveal it as a formal challenge. The seizing Panel member alone judges satisfaction (same model as CITATION NEEDED).
+
+**Scoring:** Theorist reconciles → +1 Theorist. Theorist fails → +1 Panel member. One challenge per round, first caller gets it.
+
+**Why this works:**
+- Creates immediate scarcity drama at the DRAW phase reveal — the moment discards flip face-up, Panel is scanning and racing to call seized
+- Theorist now has a meta-reason to *not* discard obviously strong cards — or to discard a deliberately misleading one as a trap
+- Adds genuine strategic depth without complexity (one mechanic, one resolution, clear judge)
+- Consistent with the competitive market trend of emergent decisions from public information (Wavelength, Codenames, Spyfall)
+
+**What happens to unseized discards?** They return **face-down to the bottom of their respective deck** at End of Turn. This:
+- Prevents any discard pile buildup over a long game
+- Means powerful cards cycle back into the deck and may reappear
+- Eliminates the question of "when does the discard pile get reshuffled?"
+
+---
+
+## Change 11: Panel PLAN Phase — Three Concurrent Activities
+
+**The problem (v2.0):** Writing one question is good but takes about 20 seconds. For the remaining 40 seconds, Panel members are watching the Theorist write silently. This is a partially solved downtime problem.
+
+**The solution:** Three concurrent Panel activities, all optional except the written question:
+
+1. **Write Your Question** — unchanged from v2.0, still required
+2. **Shadow Evidence / SEIZED** — described above; 5-second decision
+3. **Pre-Trial Wager** — privately predict your own vote (B/S/P) on the back of your Theory Sheet; +1 pt if it matches
+
+**Pre-Trial Wager design rationale:**
+- Takes 5 seconds to write. Zero explanation needed.
+- Adds a second Panel scoring channel that rewards reading the theory cards before the presentation happens
+- Creates a light "prediction game" layer: skilled players study the Theorist's chosen cards during PLAN and form an informed guess; casual players write randomly and occasionally get lucky
+- Revealed during scoring creates a second beat of drama after the VOTE reveal ("Who was right about their own vote?")
+- Borrowed from prediction mechanics in Camel Up and The Resistance — fast, personal, satisfying to resolve
+
+**Combined effect of 3 activities:** The 60-second PLAN phase is now densely used. Panel members are: studying the theory cards, deciding whether to seize a discard, formulating a genuine question, and writing a private prediction. No one has idle hands.
+
+---
+
+## Playtesting Priorities for v2.1
+
+1. Does "SEIZED" racing create fun urgency or awkward disputes? (May need a cleaner dispute rule — e.g., Panel member sitting closest to the discard pile wins, not "first to call")
+2. Does Pre-Trial Wager feel like +1 free point (random guessing) or meaningful prediction? (If too random: restrict to only BELIEVER/PLANT, no SKEPTIC, making it a binary prediction)
+3. Does the Shadow Evidence challenge actually get used? (If Panel forgets during Q&A pressure: add a reminder card for the seized player)
+4. Does Theorist recycling unseized cards back to the deck change draw dynamics? (If decks run short: standard shuffle-discard rule kicks in)
