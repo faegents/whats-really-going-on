@@ -1,6 +1,6 @@
 # What's Really Going On
-### A Conspiracy Theory Party Game for 2–6 Players
-**Ages 16+ | 45–90 Minutes**
+### A Conspiracy Theory Party Game for 3–10 Players
+**Ages 16+ | 30–75 Minutes**
 
 ---
 
@@ -23,36 +23,49 @@ In **What's Really Going On**, players draw from three decks to assemble a uniqu
 | Deck A — THE ACTORS (Red) | 60 cards (50 standard + 10 Wild) |
 | Deck B — THE ACT (Black) | 60 cards (50 standard + 10 Wild) |
 | Deck C — THE EVIDENCE (Green) | 60 cards (50 standard + 10 Wild) |
-| Conspiracy Boost Deck | 30 cards |
-| THE LEAK Card | 1 card |
-| Scoring tokens (BELIEVER/SKEPTIC/PLANT × 6 colors) | 18 sets |
+| Conspiracy Boost Deck | 31 cards (30 Boost + 1 Leak) |
+| Scoring tokens (BELIEVER/SKEPTIC/PLANT × 10 colors) | 30 sets |
 | Theory Sheet notepads | 2 × 50 sheets |
 | Dry-erase markers | 2 |
 | Erasing cloth | 1 |
-| Sand timers (90 seconds, 2 minutes) | 2 |
+| Sand timers (60 seconds, 90 seconds) | 2 |
 | Rulebook | 1 |
 
 ---
 
 ## Object of the Game
 
-Craft a conspiracy theory from your drawn cards, deliver it as if your life depends on it, and survive hostile questioning from The Panel. Earn **BELIEVER votes** to score points. First player to **20 Conviction Points** wins.
+Craft a conspiracy theory from your drawn cards, deliver it like your freedom depends on it, and survive hostile questioning from The Panel. Earn **BELIEVER votes** to score points. **First player to reach the Conviction Target wins.**
+
+---
+
+## Conviction Target by Player Count
+
+The target scales down as the table gets bigger. More players = more chaos per round = fewer rounds needed.
+
+| Players | Conviction Target |
+|---------|------------------|
+| 3–4 | 15 pts |
+| 5–6 | 12 pts |
+| 7–8 | 10 pts |
+| 9–10 | 8 pts |
 
 ---
 
 ## Setup
 
-1. **Shuffle each of the three main decks separately.** Place them face-down in the center labeled A, B, C.
-2. **Shuffle the Conspiracy Boost deck** separately. Place it face-down.
-3. **Give each player** a Theory Sheet and a pen.
+1. **Shuffle each of the three main decks separately.** Place them face-down in the center, labeled A, B, C.
+2. **Shuffle the Conspiracy Boost deck** (including THE LEAK card) separately. Place it face-down.
+3. **Give each player a Theory Sheet and a pen.**
 4. **Determine the first Theorist** — whoever most recently said something in real life that sounded like a conspiracy theory. If disputed, youngest player goes first.
-5. **Play proceeds clockwise.**
+5. **Appoint a Timekeeper** — any non-Theorist player. They own the timers. This role rotates each turn.
+6. Play proceeds clockwise.
 
 ---
 
 ## How to Play
 
-Each turn belongs to one **Theorist**. All other players are **The Panel**.
+Each turn belongs to one **Theorist**. All other players form **The Panel**.
 
 ---
 
@@ -63,7 +76,9 @@ The Theorist draws:
 - **2 cards** from Deck B (THE ACT)
 - **2 cards** from Deck C (EVIDENCE)
 
-Choose **exactly one card from each deck** to build your conspiracy. Discard unused cards face-down (or face-up if using the optional Public Discard rule).
+Choose **exactly one card from each deck** to build your conspiracy. Discard unused cards **face-up** — they are now visible to everyone.
+
+> **Why face-up?** Discards fuel panel engagement. Panel members may reference your discarded cards during interrogation ("We *noticed* you didn't go with the CIA option...").
 
 Your three chosen cards combine into one theory:
 
@@ -76,37 +91,47 @@ Your three chosen cards combine into one theory:
 
 ---
 
-### Phase 2 — PLAN (2 Minutes)
+### Phase 2 — PLAN (60 Seconds)
 
-The Theorist has **2 minutes of silence** to prepare their presentation. Jot notes on your Theory Sheet. The Panel may talk quietly among themselves but not to the Theorist.
+The Theorist has **60 seconds** to jot notes on their Theory Sheet. The timer is running. The Panel may talk among themselves but not to the Theorist.
+
+**During PLAN, the Panel draws their Question Cards.** Each Panel member secretly writes one question on their Theory Sheet — a question they intend to ask during Interrogation. This question is private until they choose to ask it. Panel members may ask additional spontaneous questions during Interrogation, but the written question commits them to at least one genuine attack.
+
+> This eliminates blank-mind freeze during Q&A and keeps all players actively engaged during the Theorist's prep time.
 
 ---
 
 ### Phase 3 — PRESENT (90 Seconds)
 
-The Theorist stands (encouraged) and delivers their conspiracy theory as if they genuinely believe it. The presentation must include all three elements:
+The Theorist stands (strongly encouraged) and delivers their conspiracy theory as if they genuinely believe it. The presentation must cover all three elements:
 
-1. Name the **ACTOR** (who is behind it)
-2. State **THE ACT** (what they did)
+1. Name the **ACTOR** — who is behind it
+2. State **THE ACT** — what they did
 3. Explain the **EVIDENCE** — both the motive and the proof
 
-Present as if speaking to a livestream audience that is skeptical but open-minded. Passion is required. Humor is permitted.
+Present as if speaking to a livestream audience that is skeptical but open-minded. Passion is required. Humor is permitted. Dead air is not.
 
-**When time is called, wrap up within one sentence.** Going over forfeits 1 point.
+**When time is called, wrap up within one sentence.** Going over time forfeits 1 point.
 
 ---
 
-### Phase 4 — INTERROGATE (2 Minutes)
+### Phase 4 — INTERROGATE (90 Seconds)
 
-The Panel questions the Theorist. Rules:
-- Any Panel member may ask a question at any time — no hand-raising required
-- Questions must genuinely attempt to poke holes or demand elaboration (no softballs)
+**Before questions begin**, the Theorist draws one **Conspiracy Boost Card**, reads it aloud, and the effect applies immediately for the duration of Q&A.
+
+The Panel now questions the Theorist. Rules:
+
+- Any Panel member may ask at any time — no hand-raising required.
+- Each Panel member **must** ask their written question at some point during Interrogation (or lose their chance).
+- Questions must genuinely attempt to poke holes or demand elaboration. Softball questions ("So... you really believe this?") are a waste of everyone's time and you should be embarrassed.
 - The Theorist must answer every question. They may **not** say "I don't know." They must stay in character.
-- The Theorist may ask for clarification, but this uses up their time.
+- The Theorist may ask for clarification once — this does not pause the timer.
 
-**At the START of Q&A**, the Theorist draws **one Conspiracy Boost Card** and reads it aloud. The effect applies immediately for the duration of Q&A.
+**CITATION NEEDED:** Each Panel member may call "CITATION NEEDED" **once per Q&A** (not once per game — once per this Q&A). When called, the Theorist must name a specific source for their most recent claim. Fake sources are not only allowed, they are the point. *(e.g., "The Journal of Hidden Truths, Volume 4 — the redacted edition" or "I watched a two-hour documentary on this, I'll send you the link, they keep taking it down.")*
 
-**CITATION NEEDED:** Once per Q&A, a Panel member may call "CITATION NEEDED." The Theorist must name a specific source for their most recent claim. Fake sources are not only allowed — they're encouraged. *(e.g., "The Journal of Hidden Truths, Volume 4, the redacted edition.")* If The Panel (majority show of hands) agrees the Theorist answered it well, the Theorist earns +1 Conviction Point (max 2 per turn this way).
+The calling Panel member alone decides if the answer was satisfying. If yes, the Theorist earns +1 Conviction Point.
+
+> This change (Panel member decides, not majority vote) speeds up the game and removes a procedural bottleneck. It also rewards one-on-one combat between questioner and Theorist.
 
 ---
 
@@ -116,11 +141,11 @@ All Panel members **simultaneously** reveal one of three vote tokens:
 
 | Token | Meaning |
 |-------|---------|
-| **BELIEVER** | Convinced, or convinced enough to act convinced |
+| **BELIEVER** | Convinced, or committed to the bit |
 | **SKEPTIC** | Not buying it, but solid effort |
-| **PLANT** | This person is clearly a government operative. Theory fell apart. |
+| **PLANT** | This person is clearly an operative. Theory collapsed. |
 
-No discussion until after tokens are revealed. You cannot vote for yourself.
+Reveal simultaneously. No discussion until after all tokens are showing. You cannot vote for yourself.
 
 ---
 
@@ -130,43 +155,49 @@ No discussion until after tokens are revealed. You cannot vote for yourself.
 
 | Result | Points |
 |--------|--------|
-| Each BELIEVER vote | 3 pts |
+| Each BELIEVER vote | 2 pts |
 | Each SKEPTIC vote | 1 pt |
 | Each PLANT vote | 0 pts |
-| Unanimous BELIEVER | +2 bonus pts |
-| Majority PLANT (charisma tax) | -1 pt (floor: 0) |
-| CITATION NEEDED answered well (each, max 2) | +1 pt |
-| Boost Card effect fully executed (Panel majority) | +1 pt |
+| Unanimous BELIEVER (all Panel members) | +3 bonus pts |
+| Majority PLANT (more than half) | –1 pt (floor: 0) |
+| CITATION NEEDED answered to Panel member's satisfaction | +1 pt each |
+| Boost Card effect fully executed (Panel majority agree) | +1 pt |
 
 **Panel earns:**
 
 | Result | Points |
 |--------|--------|
-| Voted PLANT and majority also voted PLANT | +1 pt |
-| First to vote BELIEVER and Theorist wins the round | +1 pt |
-| Best Question Award (nominated by Theorist) | +1 pt |
+| Voted PLANT and it was a majority PLANT result | +1 pt |
+| Best Question Award (given by Theorist) | +1 pt |
 
-> The **Best Question Award** is given by the Theorist after scoring to the Panel member who asked the most destabilizing question. The Theorist has nothing to gain by gaming this, so be honest.
+> **The Best Question Award** is the Theorist's call, given immediately after scoring to whoever asked the most destabilizing question. The Theorist has nothing to gain from gaming this — be honest.
+
+> **Why 2pts per BELIEVER instead of 3?** At large tables (9 Panel members), 3pts/BELIEVER made 20pts trivially achievable in one round. 2pts creates meaningful tension without requiring a grind.
 
 ---
 
 ### End of Turn
 
-After scoring: pass the Theorist role clockwise. Discards stay face-down unless using Public Discard variant.
+After scoring, pass the Theorist role clockwise. Discards from ACTORS, THE ACT, and EVIDENCE stay **face-up** in a central discard pile — visible to all players.
 
 ---
 
 ## Winning
 
-**First player to 20 Conviction Points wins.**
+**First player to reach the Conviction Target wins** (see table above).
 
-If multiple players cross 20 in the same round, play one final tiebreaker: all tied players present simultaneously with a single fresh draw, and each non-tied player casts one BELIEVER or PLANT vote. Most BELIEVERs wins. Still tied? The player with the most successful CITATION NEEDED responses across the game wins. Still tied? Flip a coin and accept that some truths cannot be known.
+If multiple players cross the target in the same round, play one final tiebreaker round:
+- All tied players draw fresh cards and present simultaneously (2-minute prep, 90-second presentation, 60-second Q&A — no Boost Card)
+- All non-tied players cast one vote: BELIEVER or PLANT
+- Most BELIEVERs wins
+- Still tied? The player who gave the Best Question Award most times across the game wins — they clearly understand what good argument looks like
+- Still tied? Accept that the truth has multiple valid interpretations and share the win
 
 ---
 
 ## The Conspiracy Boost Cards
 
-Drawn at the start of each Q&A phase. 30 total. The Theorist reads it aloud and must execute it during their defense.
+Drawn at the start of each Interrogation phase. 30 total (3 copies of each). The Theorist reads it aloud and must execute it during their defense.
 
 | Card | Effect |
 |------|--------|
@@ -181,53 +212,72 @@ Drawn at the start of each Q&A phase. 30 total. The Theorist reads it aloud and 
 | **THE ACCIDENTAL CONFESSION** | Must "accidentally" reveal something you weren't supposed to, then walk it back |
 | **NOTHING TO SEE HERE** | May refuse to answer exactly one question — but must explain why it's dangerous to answer |
 
-*(30 cards — 3 copies of each of the 10 types)*
-
 ---
 
 ## THE LEAK Card
 
 **One card. Shuffled into the Boost deck. The most chaotic element.**
 
-When drawn, the Theorist secretly passes it to any other player along with a written note. That player must read the note aloud as if it is a genuine tip they just received. The note's content is entirely written by the card holder.
+When drawn, the Theorist **does not reveal** that they drew THE LEAK. They set it aside, then secretly write a note containing a "classified tip" about their own conspiracy — something that appears to corroborate their theory or expose a deeper layer. The note must be signed from "A Concerned Insider."
+
+The Theorist secretly passes the note to any Panel member of their choice. That Panel member **must** read the note aloud during Interrogation as if they just received it — interrupting whatever is happening to do so. They must treat it as genuine. They may not reveal who passed it to them.
+
+The Panel then votes as normal. The Theorist earns +2 bonus points if THE LEAK note caused at least one Panel member to switch to BELIEVER (honor system — Panel members admit if the note changed their vote).
 
 ---
 
 ## Wild Cards
 
-Each deck has **10 Wild cards** shuffled in:
-- **[YOUR CHOICE]:** Name any actor / act / evidence of your choosing, written on the dry-erase surface
-- **[COMBO]:** Play two cards of that type — both apply
-- **[ESCALATE] (Act only):** Your conspiracy is the biggest in history — describe full scale
-- **[ONGOING] (Act only):** This has been happening since before recorded history
-- **[DOUBLE DOWN] (Evidence only):** Play two evidence cards
-- **[PERSONAL WITNESS] (Evidence only):** You personally witnessed it; describe what you saw
-- **[INSIDER] (Actor only):** Your actor is a whistleblower from inside the organization
+Each main deck has **10 Wild cards** shuffled in:
+
+**Deck A (ACTORS) Wilds:**
+- **[YOUR CHOICE]:** Name any actor of your choosing; write it on the dry-erase surface
+- **[COMBO]:** Draw a third Actor card — all three are in the conspiracy, in a hierarchy of your choosing
+- **[INSIDER]:** Your actor is a whistleblower from inside the organization — they want to be caught
+
+**Deck B (THE ACT) Wilds:**
+- **[YOUR CHOICE]:** Name any act of your choosing; write it on the dry-erase surface
+- **[ESCALATE]:** Your conspiracy is the single largest coordinated action in human history — you must describe its full operational scale
+- **[ONGOING]:** This has been happening since before recorded history. Millennia of cover-up required.
+
+**Deck C (EVIDENCE) Wilds:**
+- **[YOUR CHOICE]:** Name any evidence of your choosing; write it on the dry-erase surface
+- **[DOUBLE DOWN]:** Draw a second Evidence card — both apply; you must reconcile them
+- **[PERSONAL WITNESS]:** You personally witnessed this; describe exactly what you saw, where, and why you're still alive to talk about it
+
+---
+
+## Scaling for Large Groups (7–10 Players)
+
+At 7+ players, enforce these adjustments to keep energy high:
+
+**Panel Chaos Rule:** At 8+ players, the Panel elects a **Chief Skeptic** before Interrogation begins. The Chief Skeptic gets the last question and may interrupt the Theorist once mid-answer with "That's not what the evidence shows." The Theorist must respond without losing composure.
+
+**Simultaneous Planning:** At all player counts, PLAN phase is used by both the Theorist (writing notes) and the Panel (writing questions). This is non-negotiable at large tables — it's the only way to keep 9 people from going brain-dead for 60 seconds.
+
+**Floor Rule:** At 9–10 players, the Theorist may veto one question per Q&A entirely — not deflect, veto. They say "That line of questioning has been classified" and move on. Panel may not follow up on that specific question. This prevents dogpiling at large tables while keeping the Theorist on their toes.
 
 ---
 
 ## Optional Rules
 
-### Public Discard
-One unused card from any deck is placed face-up when the Theorist finishes choosing. Gives The Panel a misleading clue about what wasn't used.
-
-### The Deep State Ruling
-If a player's theory accidentally makes factual sense (group consensus), all other players must give that player 2 Conviction Points in awe/horror.
-
-### The Grand Unified Theory (5–6 Players)
-Once per game, any player may spend 5 points to call a GRAND UNIFIED THEORY round. That player must incorporate cards from ALL players' recent discards. 3-minute prep, 2-minute presentation, 3-minute Q&A. Scoring doubled. Failure (majority PLANT) costs 5 + 2 points.
-
 ### Hot Take Mode (Speed Variant)
-No planning phase. Choose cards in 30 seconds, present immediately (60 seconds), Q&A (90 seconds). Maximum chaos.
-
-### The Senate Hearing
-One player is THE SENATOR for the round — they conduct all Q&A in formal congressional hearing language ("reclaiming my time," etc.). Other Panel members observe only. Senator earns double Best Question bonus (+2).
+No planning phase. The Theorist has 30 seconds from their last drawn card to begin presenting. Presentation is 60 seconds. Q&A is 60 seconds. No written Panel questions — pure improvisation. Maximum chaos. Recommended for 5+ experienced players.
 
 ### Expert Mode
-No Wild cards. You play what you're dealt.
+No Wild cards. You play what you're dealt. No substitutions, no customization. The cards decide your fate, as they always have.
+
+### The Senate Hearing
+One Panel member is designated **The Senator** for the round — they conduct all Q&A in formal congressional hearing language ("reclaiming my time," "the witness will answer the question," "I yield to my colleague"). Other Panel members may ask questions only by addressing The Senator first. Senator earns the Best Question Award automatically if they run a compelling hearing. Other Panel members may dispute this.
 
 ### Cinematic Universe Mode
-Must reference at least one other player's theory from a previous round as supporting evidence.
+After the third round, each Theorist must reference at least one prior round's theory as supporting evidence. All conspiracies exist in the same universe. They must be compatible. Good luck.
+
+### The Deep State Ruling
+If a player's theory accidentally makes complete factual sense (group consensus that it's plausible), all other players immediately give that player 2 Conviction Points. The group sits in uncomfortable silence for five seconds.
+
+### Grand Unified Theory (6+ Players)
+Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIFIED THEORY round. That player draws 3 cards from each deck (choosing one per deck as normal) and must incorporate at least one card from the visible public discard pile into their theory. Prep time: 90 seconds. Presentation: 2 minutes. Q&A: 90 seconds. Scoring is doubled. If majority votes PLANT, the player loses their 3 spent points and 2 additional points (floor: 0).
 
 ---
 
@@ -235,14 +285,27 @@ Must reference at least one other player's theory from a previous round as suppo
 
 | Phase | Time | What Happens |
 |-------|------|--------------|
-| DRAW | — | 2 cards per deck; choose 1 from each |
-| PLAN | 2 min | Write your theory on your Theory Sheet |
+| DRAW | — | 2 cards per deck; choose 1 from each; discard face-up |
+| PLAN | 60 sec | Theorist writes notes; Panel writes their question |
 | PRESENT | 90 sec | Deliver with conviction; hit all 3 elements |
-| INTERROGATE | 2 min | Defend against hostile questions; draw 1 Boost Card first |
-| VOTE | — | BELIEVER / SKEPTIC / PLANT (not yourself) |
-| SCORE | — | Calculate Theorist + Panel points |
+| INTERROGATE | 90 sec | Draw Boost Card first; Panel attacks; defend everything |
+| VOTE | — | BELIEVER / SKEPTIC / PLANT — simultaneous reveal |
+| SCORE | — | Theorist pts + Panel pts; Theorist gives Best Question Award |
 
-**Win:** 20 Conviction Points | **Can't vote for yourself** | **Laughing is encouraged but weakness**
+**Win Condition by Player Count:** 3–4 players: 15 pts | 5–6: 12 pts | 7–8: 10 pts | 9–10: 8 pts
+
+**You cannot vote for yourself. You cannot say "I don't know." Laughing at your own theory is weakness.**
+
+---
+
+## Estimated Play Time
+
+| Players | Estimated Time |
+|---------|---------------|
+| 3–4 | 30–45 min |
+| 5–6 | 40–60 min |
+| 7–8 | 50–70 min |
+| 9–10 | 60–75 min |
 
 ---
 
@@ -250,13 +313,14 @@ Must reference at least one other player's theory from a previous round as suppo
 
 | Expansion | Theme |
 |-----------|-------|
-| Historical Edition | Pre-internet conspiracies, secret societies |
-| Sci-Fi Edition | Space, alien, time travel focus |
+| Historical Edition | Pre-internet conspiracies, secret societies, divine machinations |
+| Sci-Fi Edition | Space, alien, time travel, simulation theory |
 | Local Politics Edition | Municipal-level absurdist conspiracies |
 | Celebrity Edition | Entertainment industry actor deck |
+| Corporate Edition | Silicon Valley, Big Pharma, surveillance capitalism |
 
 ---
 
-*First edition. For expansions and print-and-play files, visit [wrgo.game]*
+*v2.0 — For expansions and print-and-play files, visit [wrgo.game]*
 
 *CC BY-NC 4.0 — Share freely, conspire responsibly.*
