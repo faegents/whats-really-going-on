@@ -76,9 +76,9 @@ The Theorist draws:
 - **2 cards** from Deck B (THE ACT)
 - **2 cards** from Deck C (EVIDENCE)
 
-Choose **exactly one card from each deck** to build your conspiracy. Discard unused cards **face-up** to a central area — they are now visible to everyone and stay there for the rest of the game.
+Choose **exactly one card from each deck** to build your conspiracy. Return unused cards **face-down to the bottom of their respective decks**. Place your **3 chosen cards face-up** in the center of the table — they replace any cards there from the previous round and become Shadow Evidence for the next round's Panel.
 
-> **Why face-up?** Discards become Shadow Evidence — open ammunition for the entire Panel throughout Interrogation. The discard pile grows all game. Everything left on that table is a potential weapon.
+> **Why face-up?** The previous Theorist's 3 theory cards are the only Shadow Evidence available. One set at a time — not a pile. The Panel knows exactly what was argued last turn and can use it as a weapon.
 
 Your three chosen cards combine into one theory:
 
@@ -97,7 +97,7 @@ The Theorist has **60 seconds** to jot notes on their Theory Sheet. The timer is
 
 **During PLAN, the Panel prepares.** Each Panel member secretly writes one question on their Theory Sheet — a question they intend to ask during Interrogation. This question is private until they choose to ask it. Panel members may ask additional spontaneous questions during Interrogation, but the written question commits them to at least one genuine attack.
 
-**While writing their question, Panel members should also scan the discard pile.** Any face-up card from any round is fair game as Shadow Evidence during Interrogation (see Phase 4). No claiming required — just note what's on the table.
+**While writing their question, Panel members should also examine the 3 face-up Shadow Evidence cards** — the previous Theorist's WHO, WHAT, and WHY/HOW. The Panel shares one Shadow Evidence challenge this round (see Phase 4). Decide among yourselves which card is the sharpest weapon.
 
 > This eliminates blank-mind freeze during Q&A and keeps all players actively engaged during the Theorist's prep time.
 
@@ -133,15 +133,15 @@ The Panel now questions the Theorist. Rules:
 
 The calling Panel member alone decides if the answer was satisfying. If yes, the Theorist earns +1 Conviction Point.
 
-**SHADOW EVIDENCE:** At any point during Interrogation, any Panel member may pick up a face-up card from the discard pile and present it to the Theorist:
+**SHADOW EVIDENCE:** The 3 face-up cards in the center are the **previous Theorist's theory** — their WHO, WHAT, and WHY/HOW. The Panel has **one Shadow Evidence challenge** per Interrogation. Any Panel member may deliver it by picking up one of those 3 cards and presenting it:
 
-> *"If [discarded card] was the real [ACTOR / ACT / EVIDENCE], how does your theory survive?"*
+> *"The last Theorist claimed [previous card]. If that was actually the real [ACTOR / ACT / EVIDENCE], how does your theory survive?"*
 
-The Theorist must answer. Any Panel member may use any card from the discard pile — there is no claiming, no turns, no limit. Multiple Panel members may challenge with the same card in the same round. The entire discard pile, from all previous rounds, is shared ammunition.
+The Theorist must answer. Only one Shadow Evidence challenge per round — the Panel should agree during PLAN which card to use. The card returns face-up to the center after the challenge.
 
-No points are awarded for Shadow Evidence — it is a narrative weapon. It creates pressure, reveals cracks, and occasionally collapses a theory entirely. Let the drama inform your vote.
+No points are awarded — Shadow Evidence is a narrative weapon. It draws a direct line between the last theory and this one, creates pressure, and occasionally exposes the whole conspiracy as derivative. Let the drama inform your vote.
 
-Return the card face-up to the discard pile after the challenge.
+> **First round exception:** No Shadow Evidence challenge on the very first turn — there are no previous cards in the center yet.
 
 ---
 
@@ -188,7 +188,7 @@ Reveal simultaneously. No discussion until after all tokens are showing. You can
 
 ### End of Turn
 
-After scoring, pass the Theorist role clockwise. Discards from ACTORS, THE ACT, and EVIDENCE stay **face-up** in a central discard pile — visible to all players, available as Shadow Evidence in every future round.
+After scoring, pass the Theorist role clockwise. The 3 used theory cards remain **face-up** in the center as Shadow Evidence for the next round. When the next Theorist draws and places their 3 chosen cards face-up, the previous 3 are returned **face-down to the bottom of their respective decks**.
 
 ---
 
@@ -287,7 +287,7 @@ After the third round, each Theorist must reference at least one prior round's t
 If a player's theory accidentally makes complete factual sense (group consensus that it's plausible), all other players immediately give that player 2 Conviction Points. The group sits in uncomfortable silence for five seconds.
 
 ### Grand Unified Theory (6+ Players)
-Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIFIED THEORY round. That player draws 3 cards from each deck (choosing one per deck as normal) and must incorporate at least one card from the visible public discard pile into their theory. Prep time: 90 seconds. Presentation: 2 minutes. Q&A: 90 seconds. Scoring is doubled. If majority votes PLANT, the player loses their 3 spent points and 2 additional points (floor: 0).
+Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIFIED THEORY round. That player draws 3 cards from each deck (choosing one per deck as normal) and must incorporate at least one of the 3 face-up Shadow Evidence cards currently in the center into their theory. Prep time: 90 seconds. Presentation: 2 minutes. Q&A: 90 seconds. Scoring is doubled. If majority votes PLANT, the player loses their 3 spent points and 2 additional points (floor: 0).
 
 ---
 
@@ -295,10 +295,10 @@ Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIF
 
 | Phase | Time | What Happens |
 |-------|------|--------------|
-| DRAW | — | 2 cards per deck; choose 1 from each; discard face-up (they stay all game) |
-| PLAN | 60 sec | Theorist writes notes; Panel writes their question + scans discard pile for Shadow Evidence angles |
+| DRAW | — | 2 cards per deck; choose 1 from each; unused → face-down to bottom; chosen 3 → face-up center (replace previous) |
+| PLAN | 60 sec | Theorist writes notes; Panel writes their question + agrees which Shadow Evidence card to deploy |
 | PRESENT | 90 sec | Deliver with conviction; hit all 3 elements |
-| INTERROGATE | 90 sec | Draw Boost Card first; Panel attacks; any Panel member may use any face-up discard as Shadow Evidence |
+| INTERROGATE | 90 sec | Draw Boost Card first; Panel attacks; Panel has 1 Shadow Evidence challenge using 1 of the previous round's 3 face-up cards |
 | VOTE | — | BELIEVER / SKEPTIC / PLANT — simultaneous reveal |
 | SCORE | — | Theorist pts + Panel pts; Theorist gives Best Question Award |
 
@@ -331,6 +331,6 @@ Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIF
 
 ---
 
-*v2.2 — For expansions and print-and-play files, visit [wrgo.game]*
+*v2.3 — For expansions and print-and-play files, visit [wrgo.game]*
 
 *CC BY-NC 4.0 — Share freely, conspire responsibly.*
