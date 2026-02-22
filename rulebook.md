@@ -95,11 +95,20 @@ Your three chosen cards combine into one theory:
 
 The Theorist has **60 seconds** to jot notes on their Theory Sheet. The timer is running. The Panel may talk among themselves but not to the Theorist.
 
-**During PLAN, the Panel prepares.** Each Panel member secretly writes one question on their Theory Sheet — a question they intend to ask during Interrogation. This question is private until they choose to ask it. Panel members may ask additional spontaneous questions during Interrogation, but the written question commits them to at least one genuine attack.
+**During PLAN, the Panel does three things simultaneously:**
 
-**While writing their question, Panel members should also examine the 3 face-up Shadow Evidence cards** — the previous Theorist's WHO, WHAT, and WHY/HOW. The Panel shares one Shadow Evidence challenge this round (see Phase 4). Decide among yourselves which card is the sharpest weapon.
+1. **Lock an Interrogation Angle.** Each Panel member secretly writes one of three angles on their Theory Sheet:
+   - **MOTIVE** — *"Why would they do this? What do they gain?"*
+   - **EVIDENCE** — *"Prove it. Where is the actual proof?"*
+   - **WITNESS** — *"Who else has seen this? Who confirmed it?"*
 
-> This eliminates blank-mind freeze during Q&A and keeps all players actively engaged during the Theorist's prep time.
+   Their first Interrogation question *must* use that framing — but they write the actual question *after* the Presentation, not now. No cold writing. When Interrogation begins, all Panel members reveal their locked angles simultaneously before Q&A starts. The Theorist sees what's coming and must brace.
+
+2. **Examine the Shadow Evidence.** The 3 face-up cards are the previous Theorist's WHO, WHAT, and WHY/HOW. The Panel shares one Shadow Evidence challenge this round (see Phase 4). Agree on which card is the sharpest weapon.
+
+3. **Theorist preps.** Use the 60 seconds to build your argument — especially how you'll answer MOTIVE, EVIDENCE, and WITNESS attacks.
+
+> **Why Angle Lock works:** No cold writing. Angles create a tension beat before Q&A — the Theorist knows the *type* of attack coming, not the specific question. Panel members commit, then sharpen their angle reactively after the Presentation.
 
 ---
 
@@ -119,12 +128,14 @@ Present as if speaking to a livestream audience that is skeptical but open-minde
 
 ### Phase 4 — INTERROGATE (90 Seconds)
 
-**Before questions begin**, the Theorist draws one **Conspiracy Boost Card**, reads it aloud, and the effect applies immediately for the duration of Q&A.
+**Before questions begin:**
+1. The Theorist draws one **Conspiracy Boost Card**, reads it aloud, and the effect applies immediately.
+2. **Angle Lock reveal:** All Panel members simultaneously reveal their locked angle (MOTIVE / EVIDENCE / WITNESS). The Theorist sees every angle before Q&A starts. Now Panel members write their actual first question — reactively, after hearing the full Presentation.
 
 The Panel now questions the Theorist. Rules:
 
 - Any Panel member may ask at any time — no hand-raising required.
-- Each Panel member **must** ask their written question at some point during Interrogation (or lose their chance).
+- Each Panel member's **first question must use their locked angle.** After that, they may ask anything.
 - Questions must genuinely attempt to poke holes or demand elaboration. Softball questions ("So... you really believe this?") are a waste of everyone's time and you should be embarrassed.
 - The Theorist must answer every question. They may **not** say "I don't know." They must stay in character.
 - The Theorist may ask for clarification once — this does not pause the timer.
@@ -296,9 +307,9 @@ Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIF
 | Phase | Time | What Happens |
 |-------|------|--------------|
 | DRAW | — | 2 cards per deck; choose 1 from each; unused → face-down to bottom; chosen 3 → face-up center (replace previous) |
-| PLAN | 60 sec | Theorist writes notes; Panel writes their question + agrees which Shadow Evidence card to deploy |
+| PLAN | 60 sec | Theorist writes notes; Panel secretly locks an Angle (MOTIVE / EVIDENCE / WITNESS) + agrees which Shadow Evidence card to deploy |
 | PRESENT | 90 sec | Deliver with conviction; hit all 3 elements |
-| INTERROGATE | 90 sec | Draw Boost Card first; Panel attacks; Panel has 1 Shadow Evidence challenge using 1 of the previous round's 3 face-up cards |
+| INTERROGATE | 90 sec | Draw Boost Card; Panel reveals locked Angles simultaneously; Panel writes actual first questions reactively; Panel attacks (first Q must match locked Angle); Panel has 1 Shadow Evidence challenge |
 | VOTE | — | BELIEVER / SKEPTIC / PLANT — simultaneous reveal |
 | SCORE | — | Theorist pts + Panel pts; Theorist gives Best Question Award |
 
@@ -331,6 +342,6 @@ Once per game, any player may spend **3 Conviction Points** to call a GRAND UNIF
 
 ---
 
-*v2.3 — For expansions and print-and-play files, visit [wrgo.game]*
+*v2.4 — For expansions and print-and-play files, visit [wrgo.game]*
 
 *CC BY-NC 4.0 — Share freely, conspire responsibly.*
